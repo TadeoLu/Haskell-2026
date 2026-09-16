@@ -187,4 +187,9 @@ cantidadCaracteresPalabras caracteres = contarCaracteres (extraerPalabra caracte
 
 aplanar :: [[Char]] -> [Char]
 aplanar [] = []
-aplanar (s:ss) =  : aplanar ss
+aplanar (s:ss) =  s ++ aplanar ss
+
+aplanarConBlancos :: [[Char]] -> [Char]
+aplanarConBlancos [s] = s
+aplanarConBlancos (s:ss) =  s ++ ' ' : aplanarConBlancos ss
+
